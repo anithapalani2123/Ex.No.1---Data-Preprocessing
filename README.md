@@ -33,9 +33,46 @@ Splitting the data into test and train
 
 ## PROGRAM:
 /Write your code here/
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+import pandas as pd
+df = pd.read_csv('Churn_Modelling.csv')
+df.head()
+le=LabelEncoder()
+df["CustomerId"]=le.fit_transform(df["CustomerId"])
+df["Surname"]=le.fit_transform(df["Surname"])
+df["CreditScore"]=le.fit_transform(df["CreditScore"])
+df["Geography"]=le.fit_transform(df["Geography"])
+df["Gender"]=le.fit_transform(df["Gender"])
+df["Balance"]=le.fit_transform(df["Balance"])
+df["EstimatedSalary"]=le.fit_transform(df["EstimatedSalary"])
+X=df.iloc[:,:-1].values
+print(X)
+Y=df.iloc[:,-1].values
+print(Y)
+print(df.isnull().sum())
+df.fillna(df.mean().round(1),inplace=True)
+print(df.isnull().sum())
+y=df.iloc[:,-1].values
+print(y)
+df.duplicated()
+print(df['Exited'].describe())
+scaler= MinMaxScaler()
+df1=pd.DataFrame(scaler.fit_transform(df))
+print(df1)
+x_train,x_test,y_train,x_test=train_test_split(X,Y,test_size=0.2)
+print(x_train)
+print(len(x_train))
+print(x_test)
+print(len(x_test))
 
 ## OUTPUT:
-/ Show the result/
+### Printing first five rows and cols of given dataset:
+![s1](https://user-images.githubusercontent.com/94184990/229406418-0c0e05a3-e9ef-43fb-9883-501af4d58b8d.png)
+
 
 ## RESULT
 /Type your result here/

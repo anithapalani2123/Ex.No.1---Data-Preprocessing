@@ -33,6 +33,7 @@ Splitting the data into test and train
 
 ## PROGRAM:
 /Write your code here/
+```
 import io
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
@@ -68,11 +69,32 @@ print(x_train)
 print(len(x_train))
 print(x_test)
 print(len(x_test))
-
+```
 ## OUTPUT:
 ### Printing first five rows and cols of given dataset:
 ![s1](https://user-images.githubusercontent.com/94184990/229406418-0c0e05a3-e9ef-43fb-9883-501af4d58b8d.png)
 
+### Seperating x and y values:
+![s2](https://user-images.githubusercontent.com/94184990/229406509-9a6de48b-4e60-491e-b90f-378e88c8207b.png)
 
-## RESULT
-/Type your result here/
+### Checking NULL value in the given dataset: 
+![s3](https://user-images.githubusercontent.com/94184990/229406580-0862f27b-79d9-447c-94d5-294644341619.png)
+
+### Printing the Y column along with its discribtion:
+![s4](https://user-images.githubusercontent.com/94184990/229406622-8c018536-109e-423f-8989-aa0202d88bd5.png)
+
+### Applyign data preprocessing technique and printing the dataset:
+![s5](https://user-images.githubusercontent.com/94184990/229406772-fe42b78b-7894-4957-9f48-36b52b3f3d2e.png)
+
+
+### Printing training set:
+![s6](https://user-images.githubusercontent.com/94184990/229406899-19f084f2-9730-490e-beab-4a7c3940c182.png)
+
+
+### Printing testing set and length of it:
+![s7](https://user-images.githubusercontent.com/94184990/229406932-ff5676ea-2fe0-4633-badb-8476efedd336.png)
+
+
+## RESULT:
+Hence the data preprocessing is done using the above code and data has been splitted into trainning and testing
+data for getting a better model.
